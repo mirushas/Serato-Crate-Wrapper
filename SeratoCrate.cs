@@ -114,7 +114,9 @@ namespace SeratoCrateWrapper
         /// <summary>
         /// Saves the state of the Instance into a .crate file
         /// </summary>
-        /// <param name="filePath"></param>
+        /// <param name="filePath">The path where the .crate file should be created.<br></br>Serato searches in "DriveRoot\_Serato_\Subcrates"<br></br>
+        /// to create nested crates name them using the following schema: outerCrate%%innerCrate (Raw%%NewReleaeses)
+        /// </param>
         public void WriteFile(
             string filePath)
         {
@@ -151,7 +153,8 @@ namespace SeratoCrateWrapper
             return songs;
         }
 
-        /// <summary>
+        
+/// <summary>
         /// Converts the songdata into the serato format
         /// </summary>
         /// <param name="songs">List of paths to the songfiles</param>

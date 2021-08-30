@@ -4,6 +4,17 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>E:\Projekte\Serato-Crate-Wrapper\SeratoCrateWrapper.xml</DocumentationFile>
+    <NoWarn>1701;1702;CS1572</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="EXAMPLE\**" />
+    <EmbeddedResource Remove="EXAMPLE\**" />
+    <None Remove="EXAMPLE\**" />
+  </ItemGroup>
+
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>

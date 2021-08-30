@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SeratoCrateWrapper</name>
+    </assembly>
+    <members>
+        <member name="M:SeratoCrateWrapper.ByteArrayExtensions.IndexOf(System.Byte[],System.Byte[],System.Int32)">
+            <summary>
+            Searches for the specified pattern and returns the index of its first occurrence in a one-dimensional array or in a range of elements in the array.
+            </summary>
+            <param name="bytes">The one-dimensional array to search.</param>
+            <param name="pattern">The pattern to locate in "bytes".</param>
+            <param name="start">The starting index of the search.</param>
+            <returns>The index of the first occurrence of value, if it's found, within the range of elements in array that extends from startIndex to the last element; otherwise -1.</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:SeratoCrateWrapper.ByteArrayExtensions.Slice(System.Byte[],System.Int32,System.Int32)" -->
+        <member name="T:SeratoCrateWrapper.Properties.Resources">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:SeratoCrateWrapper.Properties.Resources.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:SeratoCrateWrapper.Properties.Resources.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:SeratoCrateWrapper.Properties.Resources.DefaultCrateWithoutSongs">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Byte[].
+            </summary>
+        </member>
+        <member name="M:SeratoCrateWrapper.SeratoCrate.Load(System.String)">
+            <summary>
+            Loads an existing Serato ScratchLive Crate.
+            </summary>
+            <param name="filePath">The full path to the .crate file.</param>
+            <returns>An Instance of the SeratoCrate Class containing the song data read from the .crate file</returns>
+        </member>
+        <member name="M:SeratoCrateWrapper.SeratoCrate.CreateNew">
+            <summary>
+            Creates a new Instance of the SeratoCrate class with Serato's default settings
+            </summary>
+            <returns>A new Instance of the SeratoCrate class with Serato's default settings</returns>
+        </member>
+        <member name="M:SeratoCrateWrapper.SeratoCrate.AddSong(System.String)">
+            <summary>
+            Adds a song to the crate
+            </summary>
+            <param name="filePathWithoutDrivePart">The full path to the songfile, leaving out the drive identifier (C:\Music\test.mp3 -> Music\test.mp3) !!All songs have to be from the same drive as the crate!!</param>
+        </member>
+        <member name="M:SeratoCrateWrapper.SeratoCrate.RemoveSong(System.String)">
+            <summary>
+            Removes a song from the crate
+            </summary>
+            <param name="filePathWithoutDrivePart">The full path to the songfile, leaving out the drive identifier (C:\Music\test.mp3 -> Music\test.mp3) !!All songs have to be from the same drive as the crate!!</param>
+        </member>
+        <member name="M:SeratoCrateWrapper.SeratoCrate.WriteFile(System.String)">
+            <summary>
+            Saves the state of the Instance into a .crate file
+            </summary>
+            <param name="filePath">The path where the .crate file should be created.<br></br>Serato searches in "DriveRoot\_Serato_\Subcrates"<br></br>
+            to create nested crates name them using the following schema: outerCrate%%innerCrate (Raw%%NewReleaeses)
+            </param>
+        </member>
+        <member name="M:SeratoCrateWrapper.SeratoCrate.GetSongDataForWrite">
+            <summary>
+            Converts the songdata into the serato format
+            </summary>
+            <param name="songs">List of paths to the songfiles</param>
+            <returns>Bytes of the songdata.</returns>
+        </member>
+    </members>
+</doc>
